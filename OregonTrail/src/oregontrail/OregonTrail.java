@@ -5,6 +5,9 @@
  */
 package oregontrail;
 
+import model.Game;
+import model.Player;
+
 /**
  *
  * @author Fernando
@@ -15,7 +18,13 @@ public class OregonTrail {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Player playerOne = new Player("Mary",10.0);
+        Game game = new Game();
+        
+        game.setPlayer(playerOne);
+        
+        System.out.println("Game Object: " + game.toString());
+        System.out.println("Player Object: " + playerOne.toString());
     }
     
 }
