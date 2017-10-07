@@ -18,9 +18,11 @@ public class OregonTrail {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Player playerOne = new Player("Mary",10.0);
-        Game game = new Game();
+        Player playerOne = new Player();
+        playerOne.setName("Mary");
+        playerOne.setBestScore(100.0);
         
+        Game game = new Game();        
         game.setPlayer(playerOne);
         
         System.out.println("Game Object: " + game.toString());

@@ -18,10 +18,9 @@ public class Player implements Serializable {
     private double bestScore;
     private ArrayList<Game> games = new ArrayList<>();
 
-    public Player(String name, double bestScore) {
-        this.name = name;
-        this.bestScore = bestScore;
-    } 
+    public Player() {
+        
+    }
     
     public ArrayList<Game> getGames() {
         return games;
