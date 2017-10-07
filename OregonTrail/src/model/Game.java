@@ -13,6 +13,11 @@ import java.util.Objects;
  * @author glauc
  */
 public class Game {
+
+    @Override
+    public String toString() {
+        return "Game{" + "player=" + player.getName() + '}';
+    }
     private double totalime;
     private int noPeople;
     private Player player;
