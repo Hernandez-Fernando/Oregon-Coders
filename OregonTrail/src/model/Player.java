@@ -16,7 +16,7 @@ import java.util.Objects;
 public class Player implements Serializable {
     private String name;
     private double bestScore;
-    private ArrayList<Game> games = new ArrayList<Game>();
+    private ArrayList<Game> games = new ArrayList<>();
 
     public Player(String name, double bestScore) {
         this.name = name;
