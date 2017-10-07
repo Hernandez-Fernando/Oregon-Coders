@@ -49,4 +49,16 @@ public class Game {
     public void setPlayer(Player player) {
         this.player = player;
     }
+    
+    public void startGame(){
+        
+    }
+    
+    public void saveGame(){
+        
+    }
+    
+    public void loadGame(){
+        
+    }
 }
