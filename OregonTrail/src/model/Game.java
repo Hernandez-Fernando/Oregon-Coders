@@ -21,6 +21,7 @@ public class Game {
     private double totalime;
     private int noPeople;
     private Player player;
+    private Team team;
 
     public double getTotalime() {
         return totalime;
@@ -45,4 +46,14 @@ public class Game {
     public void setPlayer(Player player) {
         this.player = player;
     }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
+    }
+    
+    
 }

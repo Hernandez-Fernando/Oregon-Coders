@@ -14,6 +14,9 @@ import java.util.Objects;
 public class Team {
     private String location;
     private double budget;
+    private Game game;
+    private Wagon wagon;
+    private ArrayList<Person> members = new ArrayList<Person>();
 
     public Team() {
     }
@@ -67,6 +70,30 @@ public class Team {
     @Override
     public String toString() {
         return "Team{" + "location=" + location + ", budget=" + budget + '}';
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    public Wagon getWagon() {
+        return wagon;
+    }
+
+    public void setWagon(Wagon wagon) {
+        this.wagon = wagon;
+    }
+
+    public <any> getMembers() {
+        return members;
+    }
+
+    public void setMembers(<any> members) {
+        this.members = members;
     }
     
     

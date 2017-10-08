@@ -15,6 +15,7 @@ public class Person implements Serializable {
     private String profession;
     private String healthStatus;
     private Integer healthPerCent;
+    private Team team;
 
     public Person() {
     }
@@ -92,6 +93,14 @@ public class Person implements Serializable {
     @Override
     public String toString() {
         return "Person{" + "name=" + name + ", profession=" + profession + ", healthStatus=" + healthStatus + ", healthPerCent=" + healthPerCent + '}';
+    }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
     }
     
     
