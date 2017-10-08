@@ -9,6 +9,8 @@ import model.Game;
 import model.Location;
 import model.Player;
 import model.Map;
+import model.SuppliesBag;
+import model.Supply;
 
 /**
  *
@@ -42,11 +44,22 @@ public class OregonTrail {
         location.setDays(2);
         location.setVisited(true);
         
+        Supply supply = new Supply();
+        supply.setName("banana");
+        supply.setAmount(4);
+        supply.setCategory("food");
+        supply.setPrice(0.10);
+        
+        SuppliesBag bag = new SuppliesBag();
+        bag.setAllowedQuantity(10);
+        bag.addSupplyItem(supply);
         
         System.out.println("Game Object: " + game.toString());
         System.out.println("Player Object: " + playerOne.toString());
         System.out.println("Map: " + map.toString());
         System.out.println("Location: " + location.toString());
+        System.out.println("Supply: " + supply.toString());
+        System.out.println("SuppliesBag: " + bag.toString());
     }
     
 }
