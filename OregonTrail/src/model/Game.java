@@ -12,8 +12,12 @@ import java.util.Objects;
  *
  * @author glauc
  */
-public class Game {
+public class Game implements Serializable{
 
+    public Game(){
+        
+    }
+    
     @Override
     public String toString() {
         return "Game{" + "player=" + player.getName() + '}';
@@ -21,8 +25,17 @@ public class Game {
     private double totalime;
     private int noPeople;
     private Player player;
+    private Map map;
     private Team team;
 
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+    
     public double getTotalime() {
         return totalime;
     }
@@ -45,6 +58,18 @@ public class Game {
 
     public void setPlayer(Player player) {
         this.player = player;
+    }
+    
+    public void startGame(){
+        
+    }
+    
+    public void saveGame(){
+        
+    }
+    
+    public void loadGame(){
+        
     }
 
     public Team getTeam() {
