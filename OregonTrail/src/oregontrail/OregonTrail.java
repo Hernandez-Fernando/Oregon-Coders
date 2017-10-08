@@ -6,7 +6,9 @@
 package oregontrail;
 
 import model.Game;
+import model.Location;
 import model.Player;
+import model.Map;
 
 /**
  *
@@ -25,8 +27,26 @@ public class OregonTrail {
         Game game = new Game();        
         game.setPlayer(playerOne);
         
+        Map map = new Map();
+        map.setDescription("Map Testing");
+        map.setRowCount(10);
+        map.setCityName("City of Testers");
+        map.setColumnCount(200);
+        map.setCurrentCity("City of Developers");
+        map.setWearther("Testing");
+                
+        Location location = new Location();
+        location.setRow(10);
+        location.setColumn(21);
+        location.setCity("City of Test A");
+        location.setDays(2);
+        location.setVisited(true);
+        
+        
         System.out.println("Game Object: " + game.toString());
         System.out.println("Player Object: " + playerOne.toString());
+        System.out.println("Map: " + map.toString());
+        System.out.println("Location: " + location.toString());
     }
     
 }

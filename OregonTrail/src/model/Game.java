@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author glauc
  */
-public class Game {
+public class Game implements Serializable{
 
     public Game(){
         
@@ -25,7 +25,16 @@ public class Game {
     private double totalime;
     private int noPeople;
     private Player player;
+    private Map map;
 
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+    
     public double getTotalime() {
         return totalime;
     }
