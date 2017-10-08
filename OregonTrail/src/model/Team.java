@@ -5,6 +5,7 @@
  */
 package model;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -16,7 +17,7 @@ public class Team {
     private double budget;
     private Game game;
     private Wagon wagon;
-    private ArrayList<Person> members = new ArrayList<Person>();
+    private ArrayList<Person> members = new ArrayList<>();
 
     public Team() {
     }
@@ -86,16 +87,5 @@ public class Team {
 
     public void setWagon(Wagon wagon) {
         this.wagon = wagon;
-    }
-
-    public <any> getMembers() {
-        return members;
-    }
-
-    public void setMembers(<any> members) {
-        this.members = members;
-    }
-    
-    
-    
+    }  
 }
