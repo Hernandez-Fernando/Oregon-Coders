@@ -63,6 +63,12 @@ public class Wagon {
     public void setTeam(Team team) {
         this.team = team;
     }
+
+    public static class getStatus {
+
+        public getStatus() {
+        }
+    }
     
     
 }

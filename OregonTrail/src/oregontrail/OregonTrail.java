@@ -15,6 +15,7 @@ import model.Animal;
 import model.Team;
 import model.Wagon;
 import model.Person;
+import control.RiverControl;
 
 /**
  *
