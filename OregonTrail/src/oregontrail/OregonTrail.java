@@ -5,28 +5,37 @@
  */
 package oregontrail;
 
-import model.Game;
-import model.Location;
-import model.Player;
-import model.Map;
-import model.SuppliesBag;
-import model.Supply;
-import model.Animal;
-import model.Team;
-import model.Wagon;
-import model.Person;
-import control.RiverControl;
 import view.StartProgramView;
+import model.Game;
+import model.Player;
 
 /**
  *
  * @author Fernando
  */
 public class OregonTrail {
+    
+    private static Game currentGame = null;
+    private static Player player = null;
 
-    /**
-     * @param args the command line arguments
-     */
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        OregonTrail.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        OregonTrail.player = player;
+    }
+    
+    
+    
     public static void main(String[] args) {
        StartProgramView startProgramView = new StartProgramView();
        startProgramView.displayStartProgramView();

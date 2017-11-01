@@ -5,6 +5,11 @@
  */
 package view;
 
+import control.GameControl;
+import java.util.Scanner;
+import model.Player;
+
+
 /**
  *
  * @author Fernando
@@ -22,9 +27,9 @@ public class StartProgramView {
     }
 
     private void displayBanner() {
-        System.out.println("\n***************************"
-                + "\n*"
-                + "\n This is a Oregon Trail Game Version"
+        System.out.println("\n**********************************************************"
+                + "\n"
+                + "\n* This is a Oregon Trail Game Version"
                 + "\n* In this game you will experice the life"
                 + "\n* of a Pionner crossing the country to from"
                 + "\n* Independence Missuri to Oregon State."
@@ -39,13 +44,69 @@ public class StartProgramView {
                 + "\n*"
                 + "\n* Good luck!"
                 + "\n*"
-                + "\n* -Oregon Coders");
+                + "\n* -Oregon Coders"
+                + "\n*"
+                + "\n**********************************************************");
     }
 
     public void displayStartProgramView() {
-       System.out.println("The function was called");
+       boolean done = false;
+       
+       do {
+           String playerName = this.getPlayerName();
+           if (playerName.toUpperCase().equals("Q")) 
+               return;
+               
+               done = this.doAction(playerName);
+           
+      } while (!done);
+           
+       }
+
+    private String getPlayerName() {
+        // Responsive for getting the User name, evaluated and returned.
+       Scanner keyboard = new Scanner(System.in);
+       String value = "";
+       boolean valid = false;
+       
+       while(!valid) {
+           System.out.println("\n" + this.promptMessage);
+           
+           value = keyboard.nextLine();
+           value = value.trim();
+           
+           if(value.length() < 1) {
+               System.out.println("\nInvalid value: The value cannot be blank");
+               continue;
+           }
+           
+           break;
+       }
+       
+       return value;
     }
-    
-                        
+
+    private boolean doAction(String playerName) {
+        //Responsive of show the Welcome Message and Main Menu.
+        if (playerName.length() < 2) {
+            System.out.println("\n Invalid Name: The player name must be greater than one character in lenght");
+            return false;
+        }
+        
+        Player player = GameControl.createPlayer(playerName);
+        
+        if (player == null) {
+            System.out.println("\nError creating the player");
+            return false;
+        }
+        
+        this.displayNextView();
+        
+        return true;
+    }
+
+    private void displayNextView() {
+       System.out.println("DisplayNextView Function Called");
+    }
     
 }
